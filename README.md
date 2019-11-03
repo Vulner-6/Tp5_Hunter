@@ -6,4 +6,9 @@
 功能介绍
 ===============================
 直接看截图<br>
-![](https://github.com/Vulner-6/Tp5_Hunter/raw/master/Resources/1_help.png)
+![](https://github.com/Vulner-6/Tp5_Hunter/raw/master/Resources/1_help.png)<br>
+
+aaaa<br>
+bbbb<br>
+cccc<br>
+dddd
