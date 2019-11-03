@@ -95,7 +95,7 @@ public class Example implements Runnable{
             String key=this.fofa[1];
             System.out.print("请输入你希望查询到的数据个数（当真实数据超过指定条数，只取指定条数返回；" +
                     "当真实数据不足指定条数，就返回全部真实数据；" +
-                    "当真实数据为0，就什么都不返回，请重新构造正确的查询语句）：");
+                    "当真实数据为0，就什么都不返回）：");
             String num=scanner.next();
             System.out.println("请勿操作，正常查询，稍等。。。");
             int test=Integer.parseInt(num.trim());    ///这里转换报错！！！被我改正了！！！
