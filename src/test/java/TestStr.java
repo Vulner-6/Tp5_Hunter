@@ -15,5 +15,6 @@ public class TestStr {
         Scanner scanner=new Scanner(System.in);
         String str=scanner.next();
         System.out.println(str);
+
     }
 }
