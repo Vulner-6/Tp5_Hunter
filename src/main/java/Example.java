@@ -19,7 +19,7 @@ import java.util.Scanner;
                 "Github地址：https://github.com/Vulner-6",
                 "================================================================================",
                 "命令语法：",
-                "java -jar tool.jar <url来源> <利用方式><是否添加本地代理地址>",
+                "java -jar tool.jar <url来源> <利用方式> <是否添加本地代理地址>",
                 "java -jar tool.jar <-option> [value]...[-option] [value]\n"
         },
         footer={

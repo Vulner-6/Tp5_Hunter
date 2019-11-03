@@ -5,6 +5,7 @@
 
 功能介绍
 ===============================
-直接看截图
+直接看截图<br>
+![help](https://github.com/Vulner-6/Tp5_Hunter/raw/master/Resources/1_help.png)
 
-
+由于一些原因，没有再尝试研究开发一键植入持久化后门的个功能，以后可能会研究，也可能就这样了。
