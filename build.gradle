@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.wyx'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'com.squareup.okhttp3:okhttp:4.2.1'
+    compile 'com.r4v3zn.fofa:fofa-core:1.0.0'
+    compile 'info.picocli:picocli:4.0.4'
+}
