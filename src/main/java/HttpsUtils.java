@@ -8,17 +8,22 @@ import java.security.cert.X509Certificate;
 /**
  * 封装了okhttp的https请求，细节我还不是太懂
  */
-public class HttpsUtils {
+public class HttpsUtils
+{
     private MyTrustManager mMyTrustManager;
 
-    private SSLSocketFactory createSSLSocketFactory() {
+    private SSLSocketFactory createSSLSocketFactory()
+    {
         SSLSocketFactory ssfFactory = null;
-        try {
+        try
+        {
             mMyTrustManager = new MyTrustManager();
             SSLContext sc = SSLContext.getInstance("TLS");
             sc.init(null, new TrustManager[]{mMyTrustManager}, new SecureRandom());
             ssfFactory = sc.getSocketFactory();
-        } catch (Exception ignored) {
+        }
+        catch (Exception ignored)
+        {
             ignored.printStackTrace();
         }
 
@@ -26,33 +31,39 @@ public class HttpsUtils {
     }
 
     //实现X509TrustManager接口
-    public class MyTrustManager implements X509TrustManager {
+    public class MyTrustManager implements X509TrustManager
+    {
         @Override
-        public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+        public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException
+        {
         }
 
         @Override
-        public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+        public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException
+        {
         }
 
         @Override
-        public X509Certificate[] getAcceptedIssuers() {
+        public X509Certificate[] getAcceptedIssuers()
+        {
             return new X509Certificate[0];
         }
     }
 
     //实现HostnameVerifier接口
-    private class TrustAllHostnameVerifier implements HostnameVerifier {
+    private class TrustAllHostnameVerifier implements HostnameVerifier
+    {
         @Override
-        public boolean verify(String hostname, SSLSession session) {
+        public boolean verify(String hostname, SSLSession session)
+        {
             return true;
         }
     }
 
-    public OkHttpClient getTrustAllClient() {
+    public OkHttpClient getTrustAllClient()
+    {
         OkHttpClient.Builder mBuilder = new OkHttpClient.Builder();
-        mBuilder.sslSocketFactory(createSSLSocketFactory(), mMyTrustManager)
-                .hostnameVerifier(new TrustAllHostnameVerifier());
+        mBuilder.sslSocketFactory(createSSLSocketFactory(), mMyTrustManager).hostnameVerifier(new TrustAllHostnameVerifier());
         return mBuilder.build();
     }
 }

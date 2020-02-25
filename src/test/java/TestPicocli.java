@@ -1,8 +1,10 @@
 import org.junit.Test;
 
-public class TestPicocli {
+public class TestPicocli
+{
     @Test
-    public void testUseCommand(){
+    public void testUseCommand()
+    {
 
     }
 }
